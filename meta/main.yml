@@ -1,6 +1,4 @@
 ---
-dependencies: [ansible-role-repo-epel]
-
 galaxy_info:
   author: ywatase
   description: fail2ban for RHEL/CentOS.
@@ -13,3 +11,6 @@ galaxy_info:
     - 6
   categories:
     - packaging
+dependencies:
+    - goozbach.EPEL
+

@@ -6,6 +6,8 @@
   template: src=jail.local.j2 dest=/etc/fail2ban/jail.local
   notify: reload fail2ban
 
+- replace: dest=/etc/fail2ban/jail.conf regexp='^\s*enabled\s*=\s*true\s*$' replace='enabled = false' backup=yes
+
 - include: nginx_http_auth_ldap.yml
 
 - name: enable fail2ban

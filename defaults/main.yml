@@ -1,8 +1,8 @@
 ---
 fail2ban_jail:
-    nginx-http-auth:
-        enabled: false
-    ssh-iptables:
-        enabled: false
-    apache-http_auth:
-        enabled: false
+    "nginx-http-auth":
+        enabled: "false"
+    "ssh-iptables":
+        enabled: "false"
+    "apache-http_auth":
+        enabled: "false"
