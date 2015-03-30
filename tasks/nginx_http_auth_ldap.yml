@@ -1,0 +1,6 @@
+---
+- lineinfile:
+    dest: /etc/fail2ban/filter.d/nginx-http-auth.conf
+    insertafter: '^failregex\s*='
+    line: '            ^ \[error\] \d+#\d+: \*\d+ http_auth_ldap: User bind failed \(49: Invalid credentials\), client: <HOST>, server: \S+, request: "\S+ \S+ HTTP/\d+\.\d+", host: "\S+"\s*$'
+  notify: reload fail2ban

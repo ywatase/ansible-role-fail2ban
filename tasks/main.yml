@@ -1,0 +1,12 @@
+---
+- name: install fail2ban
+  yum: name=fail2ban state=present
+
+- name: setup
+  template: src=jail.local.j2 dest=/etc/fail2ban/jail.local
+  notify: reload fail2ban
+
+- include: nginx_http_auth_ldap.yml
+
+- name: enable fail2ban
+  service: name=fail2ban enabled=yes

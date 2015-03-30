@@ -1,0 +1,15 @@
+---
+dependencies: [ansible-role-repo-epel]
+
+galaxy_info:
+  author: ywatase
+  description: fail2ban for RHEL/CentOS.
+  company: "Adways Inc."
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.4
+  platforms:
+  - name: EL
+    versions:
+    - 6
+  categories:
+    - packaging

@@ -1,0 +1,7 @@
+{% for k,v in item.fail2ban.iteritems() %}
+
+[{{ k }}]
+{% for x,y in v.iteritems() %}
+{{ x }} = {{ y }};
+{% endfor %}
+{% endfor %}
